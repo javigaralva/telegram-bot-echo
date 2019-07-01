@@ -3,6 +3,11 @@ import TelegramBot from 'node-telegram-bot-api';
 // replace the value below with the Telegram token you receive from @BotFather
 const token = process.env.TOKEN || "";
 
+if( token === "" ) {
+    console.error( "You must provide a token to use Telegram API. Please, provide it via TOKEN environment variable." );
+    process.exit( -1 );
+}
+
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot( token, { polling: true } );
 
