@@ -4,15 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc -p ./tsconfig.json",
-    "watch": "tsc -p ./tsconfig.json --watch",
+    "build": "./node_modules/typescript/bin/tsc -p ./tsconfig.json",
+    "watch": "./node_modules/typescript/bin/tsc -p ./tsconfig.json --watch",
     "start": "npm run build && node ./build/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-telegram-bot-api": "^0.30.0"
+    "node-telegram-bot-api": "^0.30.0",
+    "typescript": "^3.9.3"
   },
   "devDependencies": {
     "@types/node-telegram-bot-api": "^0.31.0"
