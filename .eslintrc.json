@@ -5,6 +5,9 @@
     },
     "globals": {},
     "extends": "eslint:recommended",
+    "parserOptions": {
+        "sourceType": "module"
+    },
     "rules": {
         // Override the eslint:recommended
         "no-debugger": "off",

@@ -1,10 +1,10 @@
-import TelegramBot from 'node-telegram-bot-api';
+import TelegramBot from "node-telegram-bot-api";
 
 // replace the value below with the Telegram token you receive from @BotFather
 const token = process.env.TOKEN || "";
 
 if( token === "" ) {
-    console.error( "You must provide a token to use Telegram API. Please, provide it via TOKEN environment variable." );
+    console.error( "\n\nYou must provide a token to use Telegram API. Please, provide it via TOKEN environment variable.\n\n" );
     process.exit( -1 );
 }
 
@@ -26,9 +26,9 @@ bot.onText( /\/echo (.+)/, ( msg, match ) => {
 
 // Listen for any kind of message. There are different kinds of
 // messages.
-bot.on( 'message', ( msg ) => {
+bot.on( "message", ( msg ) => {
     const chatId = msg.chat.id;
 
     // send a message to the chat acknowledging receipt of their message
-    bot.sendMessage( chatId, 'Received your message' );
+    bot.sendMessage( chatId, "Received your message" );
 } );
